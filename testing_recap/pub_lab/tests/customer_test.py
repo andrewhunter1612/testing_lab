@@ -9,3 +9,5 @@ class TestCustomer(unittest.TestCase):
         
     def test_customer_name(self):
         self.assertEqual("Nicola", self.customer.name)
+
+    
