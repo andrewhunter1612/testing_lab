@@ -45,3 +45,6 @@ class TestPub(unittest.TestCase):
         self.assertEqual(5, self.customer.wallet)
         self.assertEqual(105, self.pub.cash)
         self.assertEqual(4, self.customer.drunkenness)
+
+    def test_get_total_stock_value(self):
+        self.assertEqual(2, self.pub.check_stock())

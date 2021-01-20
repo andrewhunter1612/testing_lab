@@ -8,6 +8,13 @@ class Pub:
     def increase_till_money(self, increase):
         self.cash += increase
 
+    def check_stock(self):
+        total_value = 0
+        for item in self.stocklist:
+            print(item.price)
+            total_value += item.price
+        return total_value
+
     def add_food(self, food):
         self.food_list.append(food)
 
@@ -34,11 +41,8 @@ class Pub:
         if self.check_age(customer) and self.check_drunkenness(customer):
             self.cash += drink.price
             customer.spend_money(drink.price)
-            print(customer.wallet)
             self.remove_drink_from_stocklist(drink)
             customer.have_drink(drink)
-        else:
-            print("You are too young, soz")
             
     def remove_food(self, food):
         for item in self.food_list:
