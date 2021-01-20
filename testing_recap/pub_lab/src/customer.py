@@ -10,4 +10,8 @@ class Customer:
 
     def have_drink(self, drink):
         self.drunkenness += drink.alcohol_level
+
+    def eat_food(self, food):
+        if self.drunkenness > 0:
+            self.drunkenness -= food.decrease_drunkenness()        
     
